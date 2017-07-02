@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans "Product" %}{% endblock %}
+{% block content %}
+    <h1>{{ product.packaging_product }}</h1>
+    {% if set_to_done %}
+    <div class="alert alert-success" role="success">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      {% trans "This product is done" %}
+    </div>
+    {% endif %}
+    <div class="col-sm-12">
+    {% for cas in product.packaging_product.cas.all %}
+        {% for pictogram in cas.pictogram.all %}
+        <div class="col-sm-2">
+            <img src="{{ pictogram.picture.url }}" alt="{{ pictogram.name }} - {{ pictogram.description }}" height="96" width="96">
+        </div>
+        {% endfor %}
+    {% endfor %}
+    </div>
+    <h2>{% trans "Hazard" %}</h2>
+    <ul>
+    {% for hazard in product.packaging_product.hazard.all %}
+        <li>{{ hazard.name }} - {{ hazard.description }}</li>
+    {% endfor %}
+    </ul>
+    <h2>{% trans "Preventive" %}</h2>
+    <ul>
+    {% for preventive in product.packaging_product.preventive.all %}
+        <li>{{ preventive.name }} - {{ preventive.description }}</li>
+    {% endfor %}
+    </ul>
+    <h2>{% trans "FDS" %}</h2>
+    <table class="table">
+    <tr><th>{% trans "FDS" %}</th><td><a href="{{ product.packaging_product.fds.file.url }}" download>{% trans 'download' %}</a> </td></tr>
+    <tr><th>{% trans "Is exact FDS" %}</th><td>{{ product.packaging_product.fds_exact|yesno:_("yes,no") }}</td></tr>
+    <tr><th>{% trans "Update date" %}</th><td>{{ product.packaging_product.fds.date }}</td></tr>
+    </table>
+
+    <h2>{% trans "Product details" %}</h2>
+    <table class="table">
+    <tr><th>{% trans "Purchase date" %}</th><td>{{ product.date_of_purchase }}</td></tr>
+    <tr><th>{% trans "Form" %}</th><td>{{ product.packaging_product.get_form_display }}</td></tr>
+    <tr><th>{% trans "Packaging" %}</th><td>{{ product.packaging_product.packaging }}</td></tr>
+    <tr><th>{% trans "Expiration date" %}</th><td>{{ product.expiration_date }}</td></tr>
+    <tr>
+        <th>{% trans "The product is empty at" %}</th>
+        {% if product.done_date is None %}
+        <td><a href="{% url 'set_to_done' product.id %}">{% trans "I finished the product" %}</a></td>
+        {% else %}
+        <td>{{ product.done_date }}</td>
+        {% endif %} 
+    </tr>
+    <tr><th>{% trans "product destroy at" %}</th><td>{{ product.destroy_date|default_if_none:_("undefined Date") }}</td></tr>
+    </table>
+
+    <h2>{% trans "Incompatible product" %}</h2>
+    {% if product.packaging_product.incompatible_product.all %}
+    <ul>
+    {% for incompatible_product in product.packaging_product.incompatible_product.all %}
+        <li>{{ incompatible_product }}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>{% trans "Compatible with any product" %}</p>
+    {% endif %}
+
+    <h2>{% trans 'Storage Contraintes' %}</h2>
+    <ul>
+    <li>
+    {% blocktrans with temperature=product.packaging_product.temperature_min %}
+    Do not store at a temperature below {{ temperature }}°C
+    {% endblocktrans %}
+    </li>
+    <li>
+    {% blocktrans with temperature=product.packaging_product.temperature_max %}
+    Do not store at a temperature above {{ temperature }}°C
+    {% endblocktrans %}
+    </li>
+    {% if product.packaging_product.ventilated_cupboard %}
+    <li>{% trans 'Shoud be stored in a ventilated cupboard' %}</li>
+    {% endif %}
+    {% if product.packaging_product.moisture %}
+    <li>{% trans 'Must be stored in a dry place' %}</li>
+    {% endif %}
+    {% if product.packaging_product.light %}
+    <li>{% trans 'Must be stored away from light' %}</li>
+    {% endif %}
+    {% if product.packaging_product.air %}
+    <li>{% trans 'Must be kept under a protective atmosphere (This product is air sensitive)' %}</li>
+    {% endif %}
+    </ul>
+
+    <h2>{% trans 'Storage area' %}</h2>
+    {% if not product.is_safe_stored %}
+    <div class="alert alert-danger" role="success">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      {% trans 'Inappropriate storage' %} 
+    </div>
+    {% endif %}
+    <p>{% trans 'Storage area' %}: {{ product.storage_area }}</p>
+    <p>{% trans 'Description'  %}: {{ product.storage_area.storage_description }}</p>
+
+    <h2>{% trans 'Disposal constraint' %}</h2>
+    <table class="table">
+    <tr><th>{% trans 'Polluant' %}</th><td>{{ product.packaging_product.polluant|yesno:_("yes,no") }}</td></tr>
+    <tr><th>{% trans 'Isolate can' %}</th><td>{{ product.packaging_product.isolate_can|yesno:_("yes,no") }}</td></tr>
+    <tr><th>{% trans 'Specific transport' %}</th><td>{{ product.packaging_product.specific_transport|yesno:_("yes,no") }}</td></tr>
+    </table>
+{% endblock %}

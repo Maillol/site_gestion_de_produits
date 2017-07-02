@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h1>Déconnecté</h1>
+<a href="{% url 'login' %}">Connectez-vous à nouveau</a>
+{% endblock %}

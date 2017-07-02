@@ -1,0 +1,477 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-26 08:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: gestion_de_produits/forms.py:24
+msgid "packaging"
+msgstr "conditionement"
+
+#: gestion_de_produits/forms.py:25
+msgid "chemical substance name"
+msgstr "Nom de la substance"
+
+#: gestion_de_produits/forms.py:26 gestion_de_produits/models.py:123
+msgid "CAS number"
+msgstr "Numéro de CAS"
+
+#: gestion_de_produits/forms.py:27
+msgid "expired before"
+msgstr "périme avant"
+
+#: gestion_de_produits/forms.py:28
+msgid "expired after"
+msgstr "périme après"
+
+#: gestion_de_produits/forms.py:29
+msgid "storage area"
+msgstr "lieu de stockage"
+
+#: gestion_de_produits/models.py:93
+msgid "product group"
+msgstr "groups de produit"
+
+#: gestion_de_produits/models.py:94
+msgid "product groups"
+msgstr "groupes de produit"
+
+#: gestion_de_produits/models.py:104
+msgid "name or synonym"
+msgstr "nom ou synonyme"
+
+#: gestion_de_produits/models.py:119
+msgid "Warning"
+msgstr "Avertissement"
+
+#: gestion_de_produits/models.py:120
+msgid "Danger"
+msgstr "Danger"
+
+#: gestion_de_produits/models.py:124
+msgid "Chemical formula"
+msgstr "formule chimique"
+
+#: gestion_de_produits/models.py:127
+msgid "mention"
+msgstr "mention"
+
+#: gestion_de_produits/models.py:130
+msgid "chemical substance"
+msgstr "substance chimique"
+
+#: gestion_de_produits/models.py:131
+msgid "chemical substances"
+msgstr "substances chimiques"
+
+#: gestion_de_produits/models.py:138 gestion_de_produits/models.py:191
+#: gestion_de_produits/models.py:289 gestion_de_produits/models.py:309
+msgid "name"
+msgstr "nom"
+
+#: gestion_de_produits/models.py:143
+msgid "manipulation protocol"
+msgstr "protocole de manipation"
+
+#: gestion_de_produits/models.py:144
+msgid "manipulation protocols"
+msgstr "protocoles de manipulation"
+
+#: gestion_de_produits/models.py:151 gestion_de_produits/models.py:165
+msgid "stockage"
+msgstr "stockage"
+
+#: gestion_de_produits/models.py:152
+msgid "laboratory name"
+msgstr "nom du laboratoire"
+
+#: gestion_de_produits/models.py:153
+msgid "floor"
+msgstr "étage"
+
+#: gestion_de_produits/models.py:154
+msgid "room"
+msgstr "salle"
+
+#: gestion_de_produits/models.py:155
+msgid "description"
+msgstr "description"
+
+#: gestion_de_produits/models.py:156 gestion_de_produits/models.py:201
+msgid "minimum temperature (Celsius degree)"
+msgstr "température minimal en degrè Celsius"
+
+#: gestion_de_produits/models.py:157 gestion_de_produits/models.py:202
+msgid "maximum temperature (Celsius degree)"
+msgstr "température maximum en degrè Celsius"
+
+#: gestion_de_produits/models.py:158 gestion_de_produits/models.py:203
+msgid "ventilated cupboard"
+msgstr "armoire ventillée"
+
+#: gestion_de_produits/models.py:159
+msgid "protect from air"
+msgstr "protége de l'air"
+
+#: gestion_de_produits/models.py:160
+msgid "protect from moisture"
+msgstr "protége de l'humidité"
+
+#: gestion_de_produits/models.py:161
+msgid "protect from light"
+msgstr "protége de la lumière"
+
+#: gestion_de_produits/models.py:166
+msgid "stockages"
+msgstr "stockages"
+
+#: gestion_de_produits/models.py:184
+msgid "liquid"
+msgstr "liquide"
+
+#: gestion_de_produits/models.py:185
+msgid "tablet"
+msgstr "tablete"
+
+#: gestion_de_produits/models.py:186
+msgid "capsule"
+msgstr "capsule"
+
+#: gestion_de_produits/models.py:187
+msgid "powder"
+msgstr "poudre"
+
+#: gestion_de_produits/models.py:193
+msgid "manufacturer's reference"
+msgstr "reference du fabriquant"
+
+#: gestion_de_produits/models.py:194
+msgid "forms"
+msgstr "format"
+
+#: gestion_de_produits/models.py:195
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:45
+msgid "Packaging"
+msgstr "Conditionement"
+
+#: gestion_de_produits/models.py:199
+msgid "is exact FDS"
+msgstr "FDS exacte"
+
+#: gestion_de_produits/models.py:204
+msgid "air sensitive"
+msgstr "sensible à l'air"
+
+#: gestion_de_produits/models.py:205
+msgid "moisture sensitive"
+msgstr "sensible à l'humidité"
+
+#: gestion_de_produits/models.py:206
+msgid "light sensitive"
+msgstr "sensible à la lumière"
+
+#: gestion_de_produits/models.py:214
+msgid "protective gloves"
+msgstr "gants de protection"
+
+#: gestion_de_produits/models.py:215
+msgid "protection"
+msgstr "protection"
+
+#: gestion_de_produits/models.py:216
+msgid "target organ"
+msgstr "organ cible"
+
+#: gestion_de_produits/models.py:218
+msgid "polluant"
+msgstr "polluant"
+
+#: gestion_de_produits/models.py:219
+msgid "isolate can"
+msgstr "bidon isolé"
+
+#: gestion_de_produits/models.py:220
+msgid "specific transport"
+msgstr "transport specifique"
+
+#: gestion_de_produits/models.py:223
+msgid "brand and packaging"
+msgstr "Marque et conditionnement"
+
+#: gestion_de_produits/models.py:224
+msgid "brands and packaging"
+msgstr "Marques et conditionnements"
+
+#: gestion_de_produits/models.py:240
+msgid "date of purchase"
+msgstr "date d'achat"
+
+#: gestion_de_produits/models.py:241
+msgid "expiration date"
+msgstr "date de péremption"
+
+#: gestion_de_produits/models.py:243
+msgid "done date"
+msgstr "produit fini le"
+
+#: gestion_de_produits/models.py:244
+msgid "destroy date"
+msgstr "date de destruction"
+
+#: gestion_de_produits/models.py:247
+msgid "product purchased"
+msgstr "produit acheté"
+
+#: gestion_de_produits/models.py:248
+msgid "products purchased"
+msgstr "produits achetés"
+
+#: gestion_de_produits/models.py:290
+msgid "web site"
+msgstr "site web"
+
+#: gestion_de_produits/models.py:291
+msgid "phone"
+msgstr "téléphone"
+
+#: gestion_de_produits/models.py:292
+msgid "e-mail"
+msgstr "mail"
+
+#: gestion_de_produits/models.py:295
+msgid "manufacturer"
+msgstr "fabricant"
+
+#: gestion_de_produits/models.py:296
+msgid "manufacturers"
+msgstr "fabricants"
+
+#: gestion_de_produits/models.py:310
+msgid "ref number"
+msgstr "numéro de référence"
+
+#: gestion_de_produits/models.py:311
+msgid "update date"
+msgstr "date de mise à jour"
+
+#: gestion_de_produits/models.py:317 gestion_de_produits/models.py:318
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:34
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:36
+msgid "FDS"
+msgstr "FDS"
+
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:11
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "Models de l'application %(name)s"
+
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:24
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:47
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:70
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:93
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:117
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:140
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:163
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:187
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:210
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:233
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:256
+msgid "Add"
+msgstr "Ajouter"
+
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:30
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:53
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:76
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:99
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:123
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:146
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:169
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:193
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:216
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:239
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:262
+msgid "Change"
+msgstr "Changer"
+
+#: gestion_de_produits/templates/admin/gestion_de_produits/app_index.html:273
+msgid "You don't have permission to edit anything."
+msgstr "Vous n'avez pas les permissions pour éditer"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:4
+msgid "Product"
+msgstr "Produit"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:10
+msgid "This product is done"
+msgstr "Ce produit est terminé"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:22
+msgid "Hazard"
+msgstr "Danger"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:28
+msgid "Preventive"
+msgstr "Préventif"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:36
+msgid "download"
+msgstr "télécharger"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:37
+msgid "Is exact FDS"
+msgstr "FDS exacte"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:37
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:107
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:108
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:109
+msgid "yes,no"
+msgstr "oui,non"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:38
+msgid "Update date"
+msgstr "Date de mise à jour"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:41
+msgid "Product details"
+msgstr "Détails du produit"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:43
+msgid "Purchase date"
+msgstr "Date d'achat"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:44
+msgid "Form"
+msgstr "Format"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:46
+msgid "Expiration date"
+msgstr "Date de péremption"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:48
+msgid "The product is empty at"
+msgstr "Ce produit est terminé"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:50
+msgid "I finished the product"
+msgstr "J'ai fini le produit"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:55
+msgid "product destroy at"
+msgstr "date de destruction"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:55
+msgid "undefined Date"
+msgstr "Date non définie"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:58
+msgid "Incompatible product"
+msgstr "Produits incompatibles"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:66
+msgid "Compatible with any product"
+msgstr "Compatible avec tous produits"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:69
+msgid "Storage Contraintes"
+msgstr "Contraintes de stockage"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:72
+#, python-format
+msgid ""
+"\n"
+"    Do not store at a temperature below %(temperature)s°C\n"
+"    "
+msgstr ""
+"\n"
+"    Ne pas stocker à une température inférieure à %(temperature)s°C\n"
+"    "
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:77
+#, python-format
+msgid ""
+"\n"
+"    Do not store at a temperature above %(temperature)s°C\n"
+"    "
+msgstr ""
+"\n"
+"    Ne pas stocker à une température supérieure à %(temperature)s°C\n"
+"    "
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:82
+msgid "Shoud be stored in a ventilated cupboard"
+msgstr "Doit être stocké dans une armoire ventilée"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:85
+msgid "Must be stored in a dry place"
+msgstr "Doit être stocké dans un endroit sec"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:88
+msgid "Must be stored away from light"
+msgstr "Doit être stocké à l'abri de la lumière"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:91
+msgid ""
+"Must be kept under a protective atmosphere (This product is air sensitive)"
+msgstr ""
+"Doit être stocké sous atmosphère protectrice (ce produit est sensible à "
+"l'air)"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:95
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:102
+msgid "Storage area"
+msgstr "Lieu de stockage"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:99
+msgid "Inappropriate storage"
+msgstr "Ce lieu de stockage ne convient pas à ce produit"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:103
+msgid "Description"
+msgstr "Description"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:105
+msgid "Disposal constraint"
+msgstr "Contraintes d'élimination"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:107
+msgid "Polluant"
+msgstr "Polluant"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:108
+msgid "Isolate can"
+msgstr "Bidon isolé"
+
+#: gestion_de_produits/templates/gestion_de_produits/detail.html:109
+msgid "Specific transport"
+msgstr "Transport specifique"
+
+#: gestion_de_produits/templates/gestion_de_produits/index.html:3
+msgid "Chemical Product Listing"
+msgstr "Liste des produits chimiques"
+
+#: gestion_de_produits/templates/gestion_de_produits/index.html:8
+msgid "Search Chemical Product"
+msgstr "Rechercher un produit chimique"
+
+#: gestion_de_produits/templates/gestion_de_produits/index.html:26
+msgid "search"
+msgstr "rechercher"
+
+#: gestion_de_produits/templates/gestion_de_produits/index.html:50
+msgid "No results"
+msgstr "Aucun résultat"

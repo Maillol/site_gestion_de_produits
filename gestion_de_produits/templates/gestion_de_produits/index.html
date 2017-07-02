@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Chemical Product Listing" %}{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="well">
+            <h3>{% trans "Search Chemical Product" %}</h3>
+            <form class="form-horizontal" action="" method="get">
+                {{ form.non_field_errors }}
+                {% for field in form %}
+                    <div {% if field.errors %}
+                         class="form-group has-warning"
+                         {% else %}
+                         class="form-group"
+                         {% endif %}>
+                        <label class="control-label col-md-4"
+                               for="{{ field.id_for_label }}">{{ field.label }}: </label>
+                        <div class="col-md-8">{{ field }}</div>
+                        {% for error in field.errors %}
+                            <span class="help-block col-md-12">{{ error|escape }}</span>
+                        {% endfor %}
+                    </div>
+                {% endfor%}
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-search"></span> {% trans "search" %}
+                </button>
+            </form>
+        </div><!-- /well -->
+    </div><!-- /col -->
+    <div class="col-md-8">
+        <table class="table">
+            {% for product in products %}
+            <tr>
+                {% if request.user.is_superuser %}
+                    <td>{{ product.number }}</td>
+                {% endif %}
+                <td>
+                    <a href="{% url 'detail' product.id %}">{{ product.packaging_product.name }}</a>
+                </td>
+                <td class="{{ product.is_safe_stored|yesno:"default,danger" }}">
+                    {{ product.storage_area }}
+                </td>
+                <td class="{{ product.is_expired|yesno:"danger,default" }}">
+                    {{ product.expiration_date }}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td>{% trans "No results" %}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% if is_paginated %}
+    <div class="text-center">
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+            {% if page_obj.has_previous %}
+            <li>
+              <a href="{% url 'index' %}?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">«</span></a>              
+            </li>
+            {% else %}              
+            <li class="disabled">
+              <a href="#" aria-label="Previous">
+              <span aria-hidden="true">«</span></a>              
+            </li>
+            {% endif %} 
+            <li class="page-current">
+                <a><span aria-hidden="true">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</span></a>
+            </li>
+            {% if page_obj.has_next %}
+            <li>
+              <a href="{% url 'index' %}?page={{ page_obj.next_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">»</span></a> 
+              </a>
+            </li>
+            {% else %}              
+            <li class="disabled">
+              <a href="#" aria-label="Previous">
+              <span aria-hidden="true">»</span></a> 
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+    </div>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Liste des produits{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+    <h1>{{ object.name }}</h1>
+
+    <h2>Format</h2>
+    <table class="table">
+        <tr>
+            <td>Forme</td><td>{{ object.form }}</td>
+        </tr>        
+        <tr>
+            <td>Conditionnement</td><td>{{ object.packaging }}</td>
+        </tr>        
+    </table>
+
+    <h2>Contrainte de stocage</h2>
+    <table class="table">
+        <tr>
+            <td>Température minimale</td><td>{{ object.temperature_max }}</td>
+        </tr>        
+        <tr>
+            <td>Température maximal</td><td>{{ object.temperature_max }}</td>
+        </tr>
+        {% if object.ventilated_cupboard %}
+        <tr>
+            <td colspan="2">Nécessite une armoire ventilée</td>
+        </tr>
+        {% endif %}
+    </table>
+
+    <h2>Contrainte d'élimination</h2>
+    <table class="table">
+        <tr>
+            <td>Polluant</td><td>{{ object.pollutant|yesno:"oui,non" }}</td>
+        </tr>        
+        <tr>
+            <td>Miscible</td><td>{{ object.miscible|yesno:"oui,non" }}</td>
+        </tr>
+        <tr>
+            <td>Savac</td><td>{{ object.savac|yesno:"oui,non" }}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
